@@ -1,0 +1,60 @@
+<section>
+	<center> <h1> Update </h1></center>
+	<div class="well">
+		<form name="newUser">
+			<center>
+				<table class="table table-hover table-responsive">
+					<tr> 
+						<td><label>First Name</label></td>
+						<td><input type="text" name="firstName" ng-model="user.firstName" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>Last Name</label></td>
+						<td><input type="text" name="lastName" ng-model="user.lastName" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>Email Id </label></td>
+						<td><input type="email" name="email" ng-model="user.email" required="" /></td>
+					</tr>
+					
+					<tr> 
+						<td><label>Street</label></td>
+						<td><input type="text" name="street" ng-model="user.address.street" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>City</label></td>
+						<td><input type="text" name="city" ng-model="user.address.city" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>State</label></td>
+						<td><input type="text" name="state" ng-model="user.address.state" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>Country</label></td>
+						<td><input type="text" name="country" ng-model="user.address.country" required="" /></td>
+					</tr>
+					<tr> 
+						<td><label>Zip</label></td>
+						<td><input type="text" name="zip" ng-model="user.address.zip" required="" /></td>
+					</tr>
+
+
+					<tr> 
+						<td><label>Company Name</label></td>
+						<td><input type="text" name="company" ng-model="user.company.name" required="" /></td>
+					</tr>	
+					<tr> 
+						<td><label>Comapny Website</label></td>
+						<td><input type="text" name="website" ng-model="user.company.website" required="" /></td>
+					</tr>																								
+					<tr> 
+						<td><label>Profile Pic URL</label></td>
+						<td><input type="text" name="url" ng-model="user.profilePic" required="" /></td>
+					</tr>				</table>
+				<br>
+				<button class="btn btn-warning" ng-click="update(user)" ng-disabled="newUser.$invalid"> Update</button>
+			</center>
+		</form>
+	</div>
+
+</section>

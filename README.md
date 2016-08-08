@@ -59,9 +59,10 @@ Returns the information for the specified user.
     
     None
 
-  **Optional:**
+   **Optional:**
+ 
+     None
     
-    None
 ---
 ### GET All User Information
 ---

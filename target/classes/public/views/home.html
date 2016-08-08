@@ -1,0 +1,47 @@
+<section>
+	<div class="container">
+		<div>
+			<h1> User Management </h1>
+			 <center><button class="btn btn-success" ng-click="navigate()"> <i class="glyphicon glyphicon-plus-sign"></i> New User </button></center> <br><br>
+
+				<form role="form">
+					<div class="col-sm-offset-1 col-sm-9 col-xs-11">
+						<input type="text" name="search" ng-model="search" placeholder="Search Users ..." style="width:100%"><br><br>
+					</div>
+
+		            <table class="table table-condensed table-hover table-responsive">
+		               <thead>
+		                <tr>
+		                  <th>First Name</th>
+		                  <th>Last Name</th>
+		                  <th>Email</th>
+		                  <th>Address</th>
+		                  <th>Company</th>
+		                  <th>Profile Pic</th>
+		                  <th>Update</th>
+		                </tr>
+		              </thead>
+		              <tbody>
+		                <tr data-ng-repeat="user in users | orderBy:predicate:reverse | searchUser:search " >
+		                <td>{{user.firstName}} 
+		                </td>
+		                <td>{{user.lastName}}
+		                </td>
+		                <td>{{user.email}}
+		                </td>                  
+		                <td>{{user.address.street}},{{user.address.city}},{{user.address.state}},{{user.address.country}},{{user.address.zip}}     
+		                </td>
+		                <td>{{user.company.name}} - {{user.company.website}}
+		                </td>
+		                <td> <img class="img-circle" ng-src="./css/img/nopic.png" title={{user.profilePic}}>
+		                </td>
+		                <td data-ng-click="edit(user.id)"><span class="glyphicon glyphicon-cog"></span>
+		                </td>
+		              </tr>
+		              </tbody>
+		            </table>
+		        </form>
+
+		</div>
+	</div>
+</section>
