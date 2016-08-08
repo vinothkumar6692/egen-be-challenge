@@ -30,7 +30,7 @@ API Documentation
 The following is the details on all API route implementations.
 
 ---
-### GET Catalog
+### GET User
 ---
 
 Returns the information for the specified user.
@@ -62,3 +62,105 @@ Returns the information for the specified user.
   **Optional:**
     
     None
+---
+### GET All User Information
+---
+
+Returns the information for all users in the datastore.
+
+* **URL**
+
+  `/findUser/`
+
+* **Method:**
+  
+  `GET`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+     None
+
+   **Optional:**
+ 
+     None
+
+* **Data Params**
+
+  **Required:**
+    
+    None
+
+  **Optional:**
+    
+    None
+
+---
+### POST Create User
+---
+
+Create a new user with the specified information.
+
+* **URL**
+
+`/createUser/`
+
+* **Method:**
+
+`POST`
+
+*  **URL Params**
+
+**Required:**
+
+ None
+
+**Optional:**
+
+ None
+
+* **Data Params**
+
+**Required:**
+
+JSON Data Object
+
+**Optional:**
+
+None
+
+---
+### POST Update User
+---
+
+Create an existing user data with the specified information.
+
+* **URL**
+
+`/updateUser/:id`
+
+* **Method:**
+
+`POST`
+
+*  **URL Params**
+
+**Required:**
+
+ `*id*`
+
+**Optional:**
+
+ None
+
+* **Data Params**
+
+**Required:**
+
+JSON Data Object
+
+**Optional:**
+
+None
+
